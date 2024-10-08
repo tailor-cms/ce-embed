@@ -1,6 +1,7 @@
 {
-  "name": "ce-embed",
+  "name": "@tailor-cms/ce-embed",
   "description": "Tailor CMS embed element",
+  "private": true,
   "version": "0.0.1",
   "author": "Studion <info@gostudion.com> (https://github.com/tailor-cms)",
   "type": "module",
@@ -39,9 +40,6 @@
     "concurrently": "^8.2.2",
     "prettier": "3.1.1",
     "typescript": "^5.1.6"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
 }
