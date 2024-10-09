@@ -8,14 +8,11 @@ import type {
 export const type = 'CE_EMBED';
 
 // Display name (e.g. shown to the author)
-export const name = 'Embded';
+export const name = 'Embed';
 
 // Function which inits element state (data property on the Content Element
 // entity)
-export const initState: DataInitializer = (): ElementData => ({
-  url: null,
-  height: 260,
-});
+export const initState: DataInitializer = (): ElementData => ({ height: 260 });
 
 // Can be loaded from package.json
 export const version = '1.0';
