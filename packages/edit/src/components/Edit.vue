@@ -22,6 +22,7 @@
       <iframe
         :height="element.data.height"
         :src="element.data.url"
+        class="d-block w-100"
         frameborder="0"
         sandbox="allow-forms allow-same-origin allow-scripts"
         title="PDF Viewer"
