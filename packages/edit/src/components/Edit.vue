@@ -1,42 +1,48 @@
 <template>
-  <div class="tce-container">
-    <div>This is Edit version of the content element id: {{ element?.id }}</div>
-    <div class="mt-6 mb-2">
-      Counter:
-      <span class="font-weight-bold">{{ element.data.count }}</span>
+  <div class="tce-embed">
+    <VSheet
+      v-if="!element.data.url"
+      class="d-flex justify-center align-center my-2 text-h6"
+      height="15.5rem"
+    >
+      <VIcon :icon="manifest.ui.icon" start />
+      {{ manifest.name }} placeholder
+    </VSheet>
+    <div v-else>
+      <VOverlay
+        :model-value="!isFocused && !isDisabled"
+        class="align-center justify-center"
+        opacity="0.9"
+        scrim="primary-darken-4"
+        close-on-content-click
+        contained
+      >
+        <button class="text-white text-h6 px-2">Click to preview</button>
+      </VOverlay>
+      <iframe
+        :height="element.data.height"
+        :src="element.data.url"
+        class="d-block w-100"
+        frameborder="0"
+        sandbox="allow-forms allow-same-origin allow-scripts"
+        title="PDF Viewer"
+      ></iframe>
     </div>
-    <button @click="increment">Increment</button>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { defineEmits, defineProps } from 'vue';
-import { Element } from '@tailor-cms/ce-embed-manifest';
+import type { Element } from '@tailor-cms/ce-embed-manifest';
+import manifest from '@tailor-cms/ce-embed-manifest';
 
-const emit = defineEmits(['save']);
-const props = defineProps<{ element: Element; isFocused: boolean }>();
-
-const increment = () => {
-  const { data } = props.element;
-  const count = data.count + 1;
-  emit('save', { ...data, count });
-};
+defineEmits(['save']);
+defineProps<{ element: Element; isFocused: boolean; isDisabled: boolean }>();
 </script>
 
-<style scoped>
-.tce-container {
-  background-color: transparent;
-  margin-top: 1rem;
-  padding: 1.5rem;
-  border: 2px dashed #888;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-}
-
-button {
-  margin: 1rem 0 0 0;
-  padding: 0.25rem 1rem;
-  background-color: #eee;
-  border: 1px solid #444;
+<style lang="scss" scoped>
+.tce-embed {
+  text-align: left;
+  position: relative;
 }
 </style>

@@ -1,6 +1,7 @@
 // Example counter component
 export interface ElementData {
-  count: number;
+  url?: string;
+  height: number;
 }
 
 export interface Element {
