@@ -1,9 +1,10 @@
 <template>
-  <div class="d-flex align-center justify-center ga-4">
+  <div class="d-flex align-center justify-center flex-fill ga-4">
     <VTextField
       :model-value="element.data.height"
       class="required"
       density="comfortable"
+      hide-details="auto"
       label="Height"
       max-width="14rem"
       prepend-inner-icon="mdi-resize"
@@ -14,6 +15,7 @@
     <VTextField
       :model-value="element.data.url"
       density="comfortable"
+      hide-details="auto"
       label="URL"
       max-width="37.5rem"
       prepend-inner-icon="mdi-link"
