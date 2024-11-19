@@ -1,5 +1,11 @@
 # @tailor-cms/ce-embed-manifest
 
+## 0.0.5
+
+### Patch Changes
+
+- Add form with validation to toolbar.
+
 ## 0.0.4
 
 ### Patch Changes
