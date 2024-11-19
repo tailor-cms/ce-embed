@@ -1,5 +1,11 @@
 # @tailor-cms/ce-embed-manifest
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated to utilize core components package.
+
 ## 0.0.3
 
 ### Patch Changes
