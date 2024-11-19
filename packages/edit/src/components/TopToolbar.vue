@@ -53,7 +53,7 @@ const rules = {
 const props = defineProps<{ element: Element }>();
 const emit = defineEmits(['save']);
 
-const isEditing = ref(false);
+const isEditing = ref(!props.element.data.url);
 const form = ref<HTMLFormElement>();
 const elementData = reactive<ElementData>(cloneDeep(props.element.data));
 
