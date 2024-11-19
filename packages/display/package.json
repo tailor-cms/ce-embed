@@ -1,7 +1,9 @@
 {
   "name": "@tailor-cms/ce-embed-display",
+  "description": "Tailor CMS embed element end-user component",
+  "author": "Studion <info@gostudion.com> (https://github.com/tailor-cms)",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -29,8 +31,6 @@
     "vite": "^4.4.5",
     "vue-tsc": "^1.8.5"
   },
-  "description": "Tailor CMS embed element",
-  "author": "Studion <info@gostudion.com> (https://github.com/tailor-cms)",
   "publishConfig": {
     "access": "public"
   }
