@@ -1,6 +1,6 @@
 {
   "name": "@tailor-cms/ce-embed-manifest",
-  "description": "Tailor CMS embed element",
+  "description": "Tailor CMS embed element manifest",
   "author": "Studion <info@gostudion.com> (https://github.com/tailor-cms)",
   "type": "module",
   "version": "0.0.3",
