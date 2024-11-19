@@ -1,5 +1,11 @@
 # @tailor-cms/ce-embed-server
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated isEditing condition to default to true if url hasn't been entered.
+
 ## 0.0.5
 
 ### Patch Changes
