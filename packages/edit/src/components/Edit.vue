@@ -1,13 +1,14 @@
 <template>
   <div class="tce-embed">
-    <VSheet
+    <ElementPlaceholder
       v-if="!element.data.url"
-      class="d-flex justify-center align-center my-2 text-h6"
-      height="15.5rem"
-    >
-      <VIcon :icon="manifest.ui.icon" start />
-      {{ manifest.name }} placeholder
-    </VSheet>
+      :icon="manifest.ui.icon"
+      :is-disabled="isDisabled"
+      :is-focused="isFocused"
+      :name="`${manifest.name} component`"
+      active-icon="mdi-arrow-up"
+      active-placeholder="Use toolbar to enter the url"
+    />
     <iframe
       v-else
       :height="element.data.height"
@@ -21,8 +22,8 @@
 </template>
 
 <script lang="ts" setup>
-import { defineEmits, defineProps } from 'vue';
 import type { Element } from '@tailor-cms/ce-embed-manifest';
+import { ElementPlaceholder } from '@tailor-cms/core-components';
 import manifest from '@tailor-cms/ce-embed-manifest';
 
 defineEmits(['save']);
