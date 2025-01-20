@@ -1,5 +1,11 @@
 # @tailor-cms/ce-embed-edit
 
+## 0.0.8
+
+### Patch Changes
+
+- Remove prefix from element type.
+
 ## 0.0.7
 
 ### Patch Changes
