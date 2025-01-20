@@ -21,6 +21,7 @@
     "lint:fix": "pnpm lint --fix"
   },
   "peerDependencies": {
+    "@tailor-cms/core-components": "^1.0.26",
     "vue": "^3.3.4"
   },
   "devDependencies": {
@@ -34,7 +35,6 @@
     "vue-tsc": "^1.8.5"
   },
   "dependencies": {
-    "@tailor-cms/core-components": "^1.0.12",
     "lodash": "^4.17.21",
     "validator": "^13.12.0"
   },
