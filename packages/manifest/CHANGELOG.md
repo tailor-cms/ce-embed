@@ -1,5 +1,11 @@
 # @tailor-cms/ce-embed-manifest
 
+## 0.0.9
+
+### Patch Changes
+
+- Revert externalizing core-components.
+
 ## 0.0.8
 
 ### Patch Changes
