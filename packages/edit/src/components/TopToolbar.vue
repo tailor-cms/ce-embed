@@ -34,10 +34,9 @@
 </template>
 
 <script setup lang="ts">
+import { cloneDeep, isEqual } from 'lodash-es';
 import { computed, reactive, ref } from 'vue';
 import type { Element, ElementData } from '@tailor-cms/ce-embed-manifest';
-import cloneDeep from 'lodash/cloneDeep';
-import isEqual from 'lodash/isEqual';
 import isURL from 'validator/lib/isURL';
 
 const rules = {
