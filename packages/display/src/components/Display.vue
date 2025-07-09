@@ -1,5 +1,5 @@
 <template>
-  <div class="tce-root">
+  <div class="tce-embed-root">
     <iframe
       :height="data.height"
       :src="data.url"
@@ -19,10 +19,3 @@ const emit = defineEmits(['interaction']);
 
 const submit = () => emit('interaction', { id: props.id });
 </script>
-
-<style lang="scss" scoped>
-.tce-root {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-}
-</style>
