@@ -1,8 +1,8 @@
 <template>
-  <div class="tce-root">
+  <div class="tce-embed-root">
     <iframe
-      :height="data.height"
-      :src="data.url"
+      :height="element.data.height"
+      :src="element.data.url"
       class="d-block w-100"
       frameborder="0"
       title="PDF Viewer"
@@ -12,17 +12,15 @@
 </template>
 
 <script setup lang="ts">
-import { ElementData } from '@tailor-cms/ce-embed-manifest';
+import { Element } from '@tailor-cms/ce-embed-manifest';
 
-const props = defineProps<{ id: number; data: ElementData; userState: any }>();
+const props = defineProps<{ element: Element; userState: any }>();
 const emit = defineEmits(['interaction']);
 
-const submit = () => emit('interaction', { id: props.id });
+const submit = () => emit('interaction', { id: props.element.id });
 </script>
 
-<style lang="scss" scoped>
-.tce-root {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+<style scoped>
+.tce-embed-root {
 }
 </style>

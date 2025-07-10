@@ -34,10 +34,9 @@
 </template>
 
 <script setup lang="ts">
+import { cloneDeep, isEqual } from 'lodash-es';
 import { computed, reactive, ref } from 'vue';
 import type { Element, ElementData } from '@tailor-cms/ce-embed-manifest';
-import cloneDeep from 'lodash/cloneDeep';
-import isEqual from 'lodash/isEqual';
 import isURL from 'validator/lib/isURL';
 
 const rules = {
@@ -60,7 +59,8 @@ const elementData = reactive<ElementData>(cloneDeep(props.element.data));
 const isDirty = computed(() => !isEqual(elementData, props.element.data));
 
 const save = async () => {
-  const { valid } = await form.value?.validate();
+  if (!form.value) return;
+  const { valid } = await form.value.validate();
   if (!valid) return;
   emit('save', elementData);
   isEditing.value = false;
