@@ -25,8 +25,8 @@ export function afterLoaded(
 
 export function afterRetrieve(
   element: Element,
-  services: HookServices,
-  runtime: ServerRuntime,
+  _services: HookServices,
+  _runtime: ServerRuntime,
 ) {
   return element;
 }
