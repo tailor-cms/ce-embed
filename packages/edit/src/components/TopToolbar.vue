@@ -24,10 +24,10 @@
         prepend-inner-icon="mdi-link-variant"
         variant="outlined"
       />
-      <VBtn v-if="!isEditing" @click="isEditing = true">Edit</VBtn>
+      <VBtn v-if="!isEditing" text="Edit" @click="isEditing = true" />
       <template v-else-if="isDirty">
-        <VBtn @click="save">Save</VBtn>
-        <VBtn @click="cancel">Cancel</VBtn>
+        <VBtn text="Save" @click="save" />
+        <VBtn text="Cancel" @click="cancel" />
       </template>
     </VToolbarItems>
   </VForm>
@@ -50,7 +50,7 @@ const rules = {
 };
 
 const props = defineProps<{ element: Element }>();
-const emit = defineEmits(['save']);
+const emit = defineEmits<{ save: [data: ElementData] }>();
 
 const isEditing = ref(!props.element.data.url);
 const form = ref<HTMLFormElement>();

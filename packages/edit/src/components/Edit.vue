@@ -1,6 +1,6 @@
 <template>
   <div class="tce-embed">
-    <ElementPlaceholder
+    <TailorElementPlaceholder
       v-if="!element.data.url"
       :icon="manifest.ui.icon"
       :is-disabled="isReadonly"
@@ -22,8 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Element } from '@tailor-cms/ce-embed-manifest';
-import { ElementPlaceholder } from '@tailor-cms/core-components';
+import type { Element, ElementData } from '@tailor-cms/ce-embed-manifest';
 import manifest from '@tailor-cms/ce-embed-manifest';
 
 defineProps<{
@@ -32,7 +31,7 @@ defineProps<{
   isFocused: boolean;
   isReadonly: boolean;
 }>();
-defineEmits(['save']);
+defineEmits<{ save: [data: ElementData] }>();
 </script>
 
 <style lang="scss" scoped>
