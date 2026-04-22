@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@tailor-cms/ce-embed-manifest": "workspace:*",
-    "@tailor-cms/eslint-config": "^2.0.0-beta.12",
+    "@tailor-cms/eslint-config": "^2.0.0-beta.13",
     "@vitejs/plugin-vue": "^6.0.5",
     "typescript": "^6.0.2",
     "vite": "^8.0.0",
