@@ -20,7 +20,6 @@ Embed content element for rendering external URLs in an iframe.
 ## Display
 
 - Renders the embedded URL in an iframe
-- Emits `interaction` on iframe load
 
 ## Development
 
