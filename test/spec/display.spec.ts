@@ -8,6 +8,7 @@ const EMBED_URL = 'https://example.com/embed';
 
 test.beforeEach(async ({ page }) => {
   await elementClient.reset(ELEMENT_ID);
+  await elementClient.resetState(ELEMENT_ID);
   await page.goto(`/?id=${ELEMENT_ID}`);
   await page.waitForLoadState('networkidle');
 });
