@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import { cloneDeep, isEqual } from 'lodash-es';
-import { computed, reactive, ref } from 'vue';
+import { computed, reactive, ref, watch } from 'vue';
 import type { Element, ElementData } from '@tailor-cms/ce-embed-manifest';
 import isURL from 'validator/lib/isURL';
 
@@ -71,6 +71,14 @@ const cancel = () => {
   form.value?.resetValidation();
   isEditing.value = false;
 };
+
+watch(
+  () => props.element.data,
+  (data) => {
+    if (isEditing.value) return;
+    Object.assign(elementData, cloneDeep(data));
+  },
+);
 </script>
 
 <style scoped></style>
