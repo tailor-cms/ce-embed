@@ -2,6 +2,7 @@
   "name": "@tailor-cms/ce-embed",
   "description": "Tailor CMS embed element",
   "author": "Studion <info@gostudion.com> (https://github.com/tailor-cms)",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {
