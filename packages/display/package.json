@@ -2,6 +2,13 @@
   "name": "@tailor-cms/ce-embed-display",
   "description": "Tailor CMS embed element end-user component",
   "author": "Studion <info@gostudion.com> (https://github.com/tailor-cms)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailor-cms/ce-embed.git",
+    "directory": "packages/display"
+  },
+  "homepage": "https://github.com/tailor-cms/ce-embed#readme",
+  "bugs": "https://github.com/tailor-cms/ce-embed/issues",
   "type": "module",
   "version": "2.0.3",
   "exports": {
