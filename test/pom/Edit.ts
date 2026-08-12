@@ -20,4 +20,8 @@ export class Edit extends pom.EditPanel {
     this.saveBtn = this.topToolbar.getByRole('button', { name: 'Save' });
     this.cancelBtn = this.topToolbar.getByRole('button', { name: 'Cancel' });
   }
+
+  async focus() {
+    await this.editor.locator('.card-body').click({ position: { x: 4, y: 4 } });
+  }
 }
