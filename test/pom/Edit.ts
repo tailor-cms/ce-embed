@@ -22,6 +22,6 @@ export class Edit extends pom.EditPanel {
   }
 
   async focus() {
-    await this.editor.click({ position: { x: 0, y: 0 } });
+    await this.editor.locator('.card-body').click({ position: { x: 4, y: 4 } });
   }
 }
