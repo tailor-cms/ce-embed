@@ -20,8 +20,4 @@ export class Edit extends pom.EditPanel {
     this.saveBtn = this.topToolbar.getByRole('button', { name: 'Save' });
     this.cancelBtn = this.topToolbar.getByRole('button', { name: 'Cancel' });
   }
-
-  async focus() {
-    await this.editor.click({ position: { x: 0, y: 0 } });
-  }
 }
