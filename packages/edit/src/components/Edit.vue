@@ -21,7 +21,7 @@
       </div>
       <VBtn
         class="mt-4"
-        color="primary"
+        color="secondary"
         prepend-icon="mdi-link-variant"
         text="Enter URL"
         variant="tonal"
