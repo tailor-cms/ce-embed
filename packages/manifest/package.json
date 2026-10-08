@@ -11,7 +11,7 @@
   "homepage": "https://github.com/tailor-cms/ce-embed#readme",
   "bugs": "https://github.com/tailor-cms/ce-embed/issues",
   "type": "module",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
