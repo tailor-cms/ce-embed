@@ -8,6 +8,6 @@ export class Display extends pom.DisplayPanel {
   constructor(page: Page) {
     super(page);
     this.root = this.editor.locator('.tce-embed-root');
-    this.viewer = this.editor.locator('iframe[title="PDF Viewer"]');
+    this.viewer = this.editor.locator('iframe[title="Embed Viewer"]');
   }
 }

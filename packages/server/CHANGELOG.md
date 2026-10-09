@@ -1,5 +1,16 @@
 # @tailor-cms/ce-embed-server
 
+## 3.0.0
+
+### Major Changes
+
+- Migrate to CEK 2.3.1. Packages are now ESM-only: CommonJS builds and the `main` / `require` entry points are removed, and the manifest and server packages emit `index.js` / `index.d.ts` instead of `index.mjs` / `index.d.mts`. The top toolbar is removed; the embed URL is added, changed and removed from the element body through a dialog, and the height setting moved to the side toolbar.
+
+### Patch Changes
+
+- Updated dependencies
+  - @tailor-cms/ce-embed-manifest@3.0.0
+
 ## 2.1.0
 
 ### Minor Changes
