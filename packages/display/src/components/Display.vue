@@ -5,7 +5,7 @@
       :src="element.data.url"
       class="d-block w-100"
       frameborder="0"
-      title="PDF Viewer"
+      title="Embed Viewer"
     ></iframe>
   </div>
 </template>
